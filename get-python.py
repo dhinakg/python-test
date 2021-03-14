@@ -16,5 +16,5 @@ for version in versions:
 
 for platform in platforms:
     print(platform)
-    print(platforms[platform])
+    print(list(dict.fromkeys(platforms[platform])))
     print()
