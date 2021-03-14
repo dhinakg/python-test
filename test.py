@@ -2,12 +2,20 @@ from ast import Import
 
 
 try:
-    import Tkinter
-    tkinter = Tkinter
+    try:
+        import Tkinter
+
+        tkinter = Tkinter
+    except ImportError:
+        import tkinter
 except ImportError:
-    import tkinter
+    tkinter = None
 
 import sys
+
 print(sys.version)
 print(sys.executable)
-print(tkinter.Tcl().eval('info patchlevel'))
+if tkinter:
+    print(tkinter.Tcl().eval("info patchlevel"))
+else:
+    print("No tkinter available")
