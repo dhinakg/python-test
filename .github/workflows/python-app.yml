@@ -17,9 +17,9 @@ jobs:
     - run: |
         echo Python
         which -a python
-        echo Python 3
+        echo \nPython 2
         which -a python2
-        echo Python 2
+        echo \nPython 3
         which -a python3
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -29,9 +29,9 @@ jobs:
     - run: |
         echo Python
         which -a python
-        echo Python 3
+        echo \nPython 2
         which -a python2
-        echo Python 2
+        echo \nPython 3
         which -a python3
       if: matrix.python-version != 'none'
     - name: Print info (Python)
@@ -42,12 +42,12 @@ jobs:
       run: |
         python2 -VV
         python2 test.py
-      if: startsWith(matrix.python-version, '2')
+      # if: startsWith(matrix.python-version, '2')
     - name: Print info (Python 3)
       run: |
         python3 -VV
         python3 test.py
-      if: startsWith(matrix.python-version, '3')
+      # if: startsWith(matrix.python-version, '3')
   build-windows:
     runs-on: windows-latest
     strategy:
@@ -58,9 +58,9 @@ jobs:
     - run: |
         echo Python
         which -a python
-        echo Python 3
+        echo \nPython 2
         which -a python2
-        echo Python 2
+        echo \nPython 3
         which -a python3
     - run: where python
     - name: Set up Python
@@ -71,9 +71,9 @@ jobs:
     - run: |
         echo Python
         which -a python
-        echo Python 3
+        echo \nPython 2
         which -a python2
-        echo Python 2
+        echo \nPython 3
         which -a python3
       if: matrix.python-version != 'none'
     - name: Print info (Python)
@@ -84,12 +84,12 @@ jobs:
       run: |
         python2 -VV
         python2 test.py
-      if: startsWith(matrix.python-version, '2')
+      # if: startsWith(matrix.python-version, '2')
     - name: Print info (Python 3)
       run: |
         python3 -VV
         python3 test.py
-      if: startsWith(matrix.python-version, '3')
+      # if: startsWith(matrix.python-version, '3')
   build-ubuntu:
     runs-on: ubuntu-latest
     strategy:
@@ -100,9 +100,9 @@ jobs:
     - run: |
         echo Python
         which -a python
-        echo Python 3
+        echo \nPython 2
         which -a python2
-        echo Python 2
+        echo \nPython 3
         which -a python3
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -112,9 +112,9 @@ jobs:
     - run: |
         echo Python
         which -a python
-        echo Python 3
+        echo \nPython 2
         which -a python2
-        echo Python 2
+        echo \nPython 3
         which -a python3
       if: matrix.python-version != 'none'
     - name: Print info (Python)
@@ -125,10 +125,10 @@ jobs:
       run: |
         python2 -VV
         python2 test.py
-      if: startsWith(matrix.python-version, '2')
+      # if: startsWith(matrix.python-version, '2')
     - name: Print info (Python 3)
       run: |
         python3 -VV
         python3 test.py
-      if: startsWith(matrix.python-version, '3')
+      # if: startsWith(matrix.python-version, '3')
         
