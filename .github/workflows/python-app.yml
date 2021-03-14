@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-      if: ! startsWith(matrix.python-version, 'none')
+      if: ! ${{ startsWith(matrix.python-version, 'none') }}
     - name: Print info
       run: |
         python -VV
