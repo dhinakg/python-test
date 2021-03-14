@@ -36,16 +36,16 @@ jobs:
     - name: Print info (Python)
       run: |
         python -VV
-        python -c "try:\nimport Tkinter;tkinter = Tkinter;\nexcept:\nimport tkinter;\nprint(tkinter.Tcl().eval('info patchlevel'))"
+        python test.py
     - name: Print info (Python 2)
       run: |
         python2 -VV
-        python2 -c "import Tkinter; print(Tkinter.Tcl().eval('info patchlevel'))"
+        python2 test.py
       if: startsWith(matrix.python-version, '2')
     - name: Print info (Python 3)
       run: |
         python3 -VV
-        python3 -c "import tkinter; print(tkinter.Tcl().eval('info patchlevel'))"
+        python3 test.py
       if: startsWith(matrix.python-version, '3')
   build-windows:
     runs-on: windows-latest
@@ -77,16 +77,16 @@ jobs:
     - name: Print info (Python)
       run: |
         python -VV
-        python -c "try:\nimport Tkinter;tkinter = Tkinter;\nexcept:\nimport tkinter;\nprint(tkinter.Tcl().eval('info patchlevel'))"
+        python test.py
     - name: Print info (Python 2)
       run: |
         python2 -VV
-        python2 -c "import Tkinter; print(Tkinter.Tcl().eval('info patchlevel'))"
+        python2 test.py
       if: startsWith(matrix.python-version, '2')
     - name: Print info (Python 3)
       run: |
         python3 -VV
-        python3 -c "import tkinter; print(tkinter.Tcl().eval('info patchlevel'))"
+        python3 test.py
       if: startsWith(matrix.python-version, '3')
   build-ubuntu:
     runs-on: ubuntu-latest
@@ -117,15 +117,15 @@ jobs:
     - name: Print info (Python)
       run: |
         python -VV
-        python -c "try:\nimport Tkinter;tkinter = Tkinter;\nexcept:\nimport tkinter;\nprint(tkinter.Tcl().eval('info patchlevel'))"
+        python test.py
     - name: Print info (Python 2)
       run: |
         python2 -VV
-        python2 -c "import Tkinter; print(Tkinter.Tcl().eval('info patchlevel'))"
+        python2 test.py
       if: startsWith(matrix.python-version, '2')
     - name: Print info (Python 3)
       run: |
         python3 -VV
-        python3 -c "import tkinter; print(tkinter.Tcl().eval('info patchlevel'))"
+        python3 test.py
       if: startsWith(matrix.python-version, '3')
         
