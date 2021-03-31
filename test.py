@@ -1,10 +1,6 @@
-from ast import Import
-
-
 try:
     try:
         import Tkinter
-
         tkinter = Tkinter
     except ImportError:
         import tkinter
