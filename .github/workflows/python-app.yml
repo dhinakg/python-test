@@ -5,6 +5,7 @@ name: Python application
 
 on:
   push:
+    - master
   workflow_dispatch:
 jobs:
   build-macos:
