@@ -9,7 +9,7 @@ on:
       - main
   workflow_dispatch:
     inputs:
-      name:
+      branch:
         description: 'Branch'
         required: true
 
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ${{ github.event.inputs.logLevel }}
+        ref: ${{ github.event.inputs.branch }}
     - run: |
         echo Python
         which -a python
