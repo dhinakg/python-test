@@ -1,2 +1,2 @@
 # python-test
-Testing Python on GitHub Actions
+Testing Python on GitHub Actions.
