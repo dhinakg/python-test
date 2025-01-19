@@ -133,5 +133,5 @@ jobs:
         python3 -VV
         python3 test.py
       # if: startsWith(matrix.python-version, '3')
-    - run: sleep 30
+    - run: sleep 180
         
